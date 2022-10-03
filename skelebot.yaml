@@ -1,0 +1,17 @@
+name: tea-shelf
+description: Record of Teas with Steeping Time and Temperature
+maintainer: Sean Shookman
+contact: SMS112788@gmail.com
+
+language: Python
+pythonVersion: '3.8'
+dependencies:
+- django~=4.1
+
+gpu: false
+primaryExe: CMD
+primaryJob: run
+jobs:
+- name: run
+  help: "Run the Django Server for the Tea Shelf Application"
+  source: jobs/run.sh
