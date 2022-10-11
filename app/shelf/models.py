@@ -7,3 +7,6 @@ class Tea(models.Model):
     steep_time = models.IntegerField(default=120) # Time in Seconds
     steep_temp = models.IntegerField(default=112) # Temp in Fahrenheit
     tsp_per_cup = models.FloatField(default=1) # Teaspoons Per Cup
+
+    def __str__(str):
+        return f"{self.name} {self.variety} Tea from {source}"
