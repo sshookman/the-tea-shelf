@@ -8,6 +8,9 @@ pythonVersion: '3.8'
 dependencies:
 - django~=4.1
 
+ports:
+- 8000:8000
+
 gpu: false
 primaryExe: CMD
 primaryJob: run
