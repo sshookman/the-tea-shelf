@@ -8,10 +8,17 @@ pythonVersion: '3.8'
 dependencies:
 - django~=4.1
 
+ports:
+- 8000:8000
+
 gpu: false
 primaryExe: CMD
 primaryJob: run
 jobs:
 - name: run
-  help: "Run the Django Server for the Tea Shelf Application"
+  help: "Run the Django Server for the Tea Shelf"
   source: jobs/run.sh
+- name: update-models
+  help: "Update the Django Models for the Tea Shelf"
+  source: jobs/update_models.sh
+  native: "always"
