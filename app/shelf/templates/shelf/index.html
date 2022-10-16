@@ -1,0 +1,10 @@
+<h2>Tea Shelf</h2>
+{% if teas %}
+    <ul>
+    {% for tea in teas %}
+        <li><a href="/shelf/{{ tea.id }}/">{{ tea.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Please Add Some Teas!.</p>
+{% endif %}

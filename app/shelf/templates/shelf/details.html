@@ -1,0 +1,5 @@
+{% if tea %}
+    <a href="/shelf/{{ tea.id }}/timer/">{{ tea.name }}</a>
+{% else %}
+    <p>Tea Not Found.</p>
+{% endif %}
