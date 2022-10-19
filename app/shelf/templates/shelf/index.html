@@ -2,7 +2,10 @@
 {% if teas %}
     <ul>
     {% for tea in teas %}
-        <li><a href="/shelf/{{ tea.id }}/">{{ tea.name }}</a></li>
+        <li>
+            <a href="/shelf/{{ tea.id }}/">{{ tea.name }}</a>
+            {{ tea.variety }} Tea [{{ tea.source }}]
+        </li>
     {% endfor %}
     </ul>
 {% else %}
