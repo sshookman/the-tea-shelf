@@ -1,8 +1,12 @@
 <h2>Tea Shelf</h2>
 {% if teas %}
+    <a href="{% url 'form' %}">Add Tea</a>
     <ul>
     {% for tea in teas %}
-        <li><a href="/shelf/{{ tea.id }}/">{{ tea.name }}</a></li>
+        <li>
+            <a href="{% url 'detail' tea.id %}">{{ tea.name }}</a>
+            {{ tea.variety }} Tea [{{ tea.source }}]
+        </li>
     {% endfor %}
     </ul>
 {% else %}

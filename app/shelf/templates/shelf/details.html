@@ -1,5 +1,7 @@
 {% if tea %}
-    <a href="/shelf/{{ tea.id }}/timer/">{{ tea.name }}</a>
+    <h2>{{ tea.name }}</h2>
+    <a href="{% url 'timer' tea.id %}">Steep</a>
+    {{ tea.tsp_per_cup }} Teaspoons/Cup for {{ tea.steep_time }}s at {{ tea.steep_temp }}°
 {% else %}
     <p>Tea Not Found.</p>
 {% endif %}

@@ -18,6 +18,8 @@ jobs:
 - name: run
   help: "Run the Django Server for the Tea Shelf"
   source: jobs/run.sh
+  mappings:
+  - app/database/
 - name: update-models
   help: "Update the Django Models for the Tea Shelf"
   source: jobs/update_models.sh
